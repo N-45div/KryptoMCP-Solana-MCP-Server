@@ -24,7 +24,7 @@ async def wallet_balance(address: str) -> dict[str, Any] | None:
     Get wallet balance of wallet address
     """
     try:
-        balances_api = BalancesAPI("872c1681-2197-4b2c-ba82-4725bbeabc91")
+        balances_api = BalancesAPI("HELIUS_API_KEY")
         response = balances_api.get_balances(address)
         return response
     except Exception as e:
@@ -112,7 +112,7 @@ async def get_inflation() -> dict[str, Any] | None:
     Get inflation rate on solana
     """
     try:
-        url = "https://go.getblock.io/d964401d4f26420486d343926f65cf1e"; 
+        url = "https://go.getblock.io/${API_KEY}"; 
         headers = {"Content-Type": "application/json"}
         payload = {
             "jsonrpc": "2.0",
@@ -131,7 +131,7 @@ async def get_epoch() -> dict[str, Any] | None:
     Get epoch schedule on solana
     """
     try:
-        url = "https://go.getblock.io/d964401d4f26420486d343926f65cf1e"; 
+        url = "https://go.getblock.io/${API_KEY}"; 
         headers = {"Content-Type": "application/json"}
         payload = {
             "jsonrpc": "2.0",
@@ -151,7 +151,7 @@ async def get_inflagov() -> dict[str, Any] | None:
     Gets the current inflation governor settings of the Solana blockchain.
     """
     try:
-        url = "https://go.getblock.io/d964401d4f26420486d343926f65cf1e"; 
+        url = "https://go.getblock.io/${API_KEY}"; 
         headers = {"Content-Type": "application/json"}
         payload = {
             "jsonrpc": "2.0",
