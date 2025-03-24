@@ -13,7 +13,7 @@ import asyncio
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-mcp = FastMCP("defidune")
+mcp = FastMCP("SolMCP")
 
 load_dotenv()
 
